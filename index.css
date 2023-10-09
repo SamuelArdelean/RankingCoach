@@ -90,6 +90,7 @@ td {
 .main-gallery{
   text-align: center; /* Aliniați orizontal imaginea în mijloc */
   display: flex;
+  flex-wrap: wrap; /* metoda de rearanjare a imaginilor daca redimensionam ecranul*/
   flex-direction: row;
   justify-content: center; /* Aliniați vertical imaginea în mijloc */
   align-items: center;
