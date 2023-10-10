@@ -22,16 +22,10 @@ h2 {
   font-size: 20pt;
   letter-spacing: 0.1rem;
   text-align: center;
-  clear: both;
 }
 
 /** Button **/
 
-.flex-container{  
-  display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
-}
 button {
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 0, 0);
@@ -60,12 +54,17 @@ table {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+  margin: auto;
 }
 th {
   border: 2px solid rgb(255, 0, 0);
 }
 td {
   border: 2px solid rgb(207, 115, 109);
+}
+
+.blackTable {
+  border: 1px solid black;
 }
 
 /** Body Sections **/
@@ -86,36 +85,33 @@ td {
   background-color: rgb(211, 167, 167);
 }
 
-/** Images **/
-.main-gallery{
-  text-align: center; /* Aliniați orizontal imaginea în mijloc */
+/** Gallery **/
+
+.gallery {
+  margin-top: 48px;
   display: flex;
-  flex-wrap: wrap; /* metoda de rearanjare a imaginilor daca redimensionam ecranul*/
-  flex-direction: row;
-  justify-content: center; /* Aliniați vertical imaginea în mijloc */
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
-.gallery{
-  margin: 20px;
+.gallery-item {
   border: 1px solid #cc1717;
-  float: left;
-  width: 150px;
-
-}
-.gallery:hover {
-  border: 1px solid #0a0374;
+  border-radius: 8px;
   cursor: pointer;
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+}
+.gallery-item:hover {
+  border: 1px solid #0a0374;
 }
 
-.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-.desc {
+.gallery-desc {
   padding: 15px;
   text-align: center;
 }
+
+/** Images **/
 
 .image {
   display: block;
@@ -124,13 +120,46 @@ td {
   border-radius: 10px;
 }
 
-.image_zoom {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
+.zoom_on_hover {
   transition: all 0.25s;
+  cursor: pointer;
 }
-.image_zoom:hover {
+.zoom_on_hover:hover {
   transform: scale(1.5);
+}
+
+/** Preview **/
+
+.preview-container {
+  background-color: gray;
+  border-radius: 16px;
+
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 32px;
+  box-sizing: border-box;
+
+  width: 80vw;
+  height: 80vh;
+  position: fixed;
+  left: 10vw;
+  top: 10vh;
+
+  align-items: center;
+}
+.preview-container img {
+  width: 60vw;
+  height: 60vh;
+  object-fit: contain;
+}
+
+/** Menu **/
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 16px;
 }
