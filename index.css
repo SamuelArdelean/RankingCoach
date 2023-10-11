@@ -131,22 +131,19 @@ td {
 /** Preview **/
 
 .preview-container {
-  background-color: gray;
+  background-color: #dfa7a7;
   border-radius: 16px;
-
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 16px;
-
   padding: 32px;
   box-sizing: border-box;
-
-  width: 80vw;
-  height: 80vh;
+  width: 70vw;
+  height: 90vh;
   position: fixed;
-  left: 10vw;
-  top: 10vh;
-
+  left: 14vw;
+  top: 5vh;
   align-items: center;
 }
 .preview-container img {
@@ -162,4 +159,5 @@ td {
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 16px;
+  margin-top: 10px;
 }
