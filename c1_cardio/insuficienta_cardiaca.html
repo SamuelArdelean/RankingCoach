@@ -3,7 +3,7 @@
   <head>
     <title>Insuficienta cardiaca</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <script src="myscript.js" defer></script>
+    <script src="myscript.js"></script>
   </head>
   <body>
     <div class="main-container">
@@ -75,12 +75,6 @@
           ;
         ></div>
       </div>
-      <div class="preview-container">
-        <img id="image" src="" alt="No Image" width="200px" />
-        <!-- <button id="closeButton">Inchide</button> -->
-        <p id="preview-container p"></p>
-        <button onclick="closePreviewHandler()">Inchide</button>
-      </div>
 
       <h2>2. Tratament</h2>
       <table style="width: 70%">
@@ -117,10 +111,9 @@
         <div
           class="gallery-item"
           style="
-            background-image: url('assets/insuficienta\ cardiaca-ramipril.png')
-              'Ramipril';
+            background-image: url('assets/insuficienta\ cardiaca-ramipril.png');
           "
-          onclick="openPreviewHandler('assets/insuficienta\ cardiaca-ramipril.png')"
+          onclick="openPreviewHandler('assets/insuficienta\ cardiaca-ramipril.png','Ramipril')"
           ;
         ></div>
 
@@ -140,7 +133,7 @@
           "
           onclick="openPreviewHandler('assets/insuficienta\ cardiaca-spironolactona.jpg','Spironolactona')"
           ;
-        >
+        ></div>
       </div>
 
       <div class="menu">
@@ -149,6 +142,13 @@
           Spre topicul urmator
         </button>
       </div>
+    </div>
+
+    <div class="preview-container">
+      <img id="image" src="" alt="No Image" width="200px" />
+      <!-- <button id="closeButton">Inchide</button> -->
+      <p id="preview-container p"></p>
+      <button onclick="closePreviewHandler()">Inchide</button>
     </div>
   </body>
 </html>
