@@ -1,8 +1,9 @@
-function openPreviewHandler(src) {
+function openPreviewHandler(src, description) {
   console.log(src);
   document.getElementById("image").src = src;
   document.getElementById("image").style.display = "block";
   document.querySelector(".preview-container").style.display = "flex";
+  document.querySelector(".preview-container p").textContent = description;
 }
 function closePreviewHandler() {
   document.getElementById("image").src = "";

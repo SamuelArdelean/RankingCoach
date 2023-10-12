@@ -53,7 +53,7 @@
           style="
             background-image: url('assets/insuficienta cardiaca_edeme.jpg');
           "
-          onclick="openPreviewHandler('assets/insuficienta cardiaca_edeme.jpg')"
+          onclick="openPreviewHandler('assets/insuficienta cardiaca_edeme.jpg','Edeme Gambiere')"
           ;
         ></div>
 
@@ -62,7 +62,7 @@
           style="
             background-image: url('assets/insuficienta cardiaca_ascita.jpg');
           "
-          onclick="openPreviewHandler('assets/insuficienta cardiaca_ascita.jpg')"
+          onclick="openPreviewHandler('assets/insuficienta cardiaca_ascita.jpg','Ascita peritoneala')"
           ;
         ></div>
 
@@ -71,14 +71,15 @@
           style="
             background-image: url('assets/insuficienta cardiaca_turgescenta.jpg');
           "
-          onclick="openPreviewHandler('assets/insuficienta cardiaca_turgescenta.jpg')"
+          onclick="openPreviewHandler('assets/insuficienta cardiaca_turgescenta.jpg','Turgescenta jugularelor')"
           ;
         ></div>
       </div>
       <div class="preview-container">
         <img id="image" src="" alt="No Image" width="200px" />
         <!-- <button id="closeButton">Inchide</button> -->
-        <button onclick="closePreviewHandler()">Inchide</button>;
+        <p id="preview-container p"></p>
+        <button onclick="closePreviewHandler()">Inchide</button>
       </div>
 
       <h2>2. Tratament</h2>
@@ -109,14 +110,15 @@
           style="
             background-image: url('assets/insuficienta cardiaca-perindopril.jpg');
           "
-          onclick="openPreviewHandler('assets/insuficienta cardiaca-perindopril.jpg')"
+          onclick="openPreviewHandler('assets/insuficienta cardiaca-perindopril.jpg','Perindopril')"
           ;
         ></div>
 
         <div
           class="gallery-item"
           style="
-            background-image: url('assets/insuficienta\ cardiaca-ramipril.png');
+            background-image: url('assets/insuficienta\ cardiaca-ramipril.png')
+              'Ramipril';
           "
           onclick="openPreviewHandler('assets/insuficienta\ cardiaca-ramipril.png')"
           ;
@@ -127,7 +129,7 @@
           style="
             background-image: url('assets/insuficienta\ cardiaca-furosemid.jpg');
           "
-          onclick="openPreviewHandler('assets/insuficienta\ cardiaca-furosemid.jpg')"
+          onclick="openPreviewHandler('assets/insuficienta\ cardiaca-furosemid.jpg','Furosemid')"
           ;
         ></div>
 
@@ -136,9 +138,9 @@
           style="
             background-image: url('assets/insuficienta\ cardiaca-spironolactona.jpg');
           "
-          onclick="openPreviewHandler('assets/insuficienta\ cardiaca-spironolactona.jpg')"
+          onclick="openPreviewHandler('assets/insuficienta\ cardiaca-spironolactona.jpg','Spironolactona')"
           ;
-        ></div>
+        >
       </div>
 
       <div class="menu">
