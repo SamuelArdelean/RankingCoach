@@ -8,6 +8,31 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+/**TopNav Bar**/
+
+.topnav {
+  background-color: #c59b9b;
+  overflow: hidden;
+  margin-top: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.5s;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
 /** Headings **/
 
