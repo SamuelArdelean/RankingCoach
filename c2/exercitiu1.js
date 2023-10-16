@@ -107,9 +107,91 @@
 // //   console.log();
 // // }
 
-let x = {
-  title: "blablabla",
-  year: 1700,
-};
-console.log(x.title);
-console.log(x["title"]);
+// let x = {
+//   title: "blablabla",
+//   year: 1700,
+// };
+// console.log(x.title);
+// console.log(x["title"]);
+
+/*1. ADVANCE CALCULATOR*/
+let pow = 1;
+function advanceCalculator(x, y, operator) {
+  if (operator == "add") {
+    console.log(x + y);
+  } else if (operator == "substract") {
+    console.log(x - y);
+  } else if (operator == "multiply") {
+    console.log(x * y);
+  } else if (operator == "divide") {
+    if (y == 0) {
+      console.log("Nu este pozibila impartirea la 0");
+    }
+    console.log(x / y);
+  } else if (operator == "power") {
+    for (let i = 1; i <= y; i++) {
+      pow = pow * x;
+    }
+    console.log(pow);
+  }
+}
+advanceCalculator(2, 3, "add");
+advanceCalculator(2, 3, "substract");
+advanceCalculator(2, 3, "multiply");
+advanceCalculator(2, 3, "divide");
+advanceCalculator(2, 3, "power");
+
+/*2. LIBRARY ORGANIZER*/
+const library = [
+  {
+    title: "Amintiri din copilarie",
+    author: "Ion Creanga",
+    genre: "naration",
+    year: 1898,
+  },
+  {
+    title: "Anatomia omului",
+    author: "Victor Papilian",
+    genre: "medicine",
+    year: 1939,
+  },
+  {
+    title: "About Universe",
+    author: "Stephen Hawkin",
+    genre: "science",
+    year: 1989,
+  },
+  {
+    title: "Microbiologie",
+    author: "Ardelean Samuel",
+    genre: "medicine",
+    year: 1996,
+  },
+];
+console.log("Libraria contine urmatoarele carti");
+console.log(library);
+function filterByGenre(genre) {
+  for (let i = 0; i <= library.length - 1; i++) {
+    if (genre == library[i].genre) {
+      console.log(library[i]);
+    }
+  }
+}
+console.log("Cartile care sunt incadrate in genul ales sunt urmatoarele:");
+filterByGenre("science");
+
+function latestPublication() {
+  max = library[0].year;
+  for (let i = 0; i <= library.length - 1; i++) {
+    if (library[i].year > max) {
+      max = library[i].year;
+    }
+  }
+  for (let j = 0; j <= library.length - 1; j++) {
+    if (library[j].year == max) {
+      console.log(library[j]);
+    }
+  }
+}
+console.log("Cartea cea mai recet publicata este:");
+latestPublication();
