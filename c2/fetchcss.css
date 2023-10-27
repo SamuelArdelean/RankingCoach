@@ -52,7 +52,7 @@ h1 {
   border-color: rgba(194, 117, 17, 0.658);
   border-radius: 5px;
   width: auto;
-  background-color: lightgray;
+  background-color: rgb(255, 248, 181);
 }
 .card div {
   margin: 10px;
