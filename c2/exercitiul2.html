@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewpoint" content="width=device=width, inital-scale=1.0" />
+    <title>Sample Page for DOM Exercises</title>
+    <link rel="stylesheet" type="text/css" href="exercitiul2style.css" />
+    <script src="exercitiul2.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="main-title">Welcome to the Sample Page</h1>
+    </header>
+
+    <div class="intro">
+      <p>This is the first paragaph. It has some content to work with.</p>
+      <p class="highlight">
+        This is a highlighted paragraph with a specific class
+      </p>
+    </div>
+    <button class="addItem" onclick="addItem()">Add new item</button>
+    <section id="content">
+      <div class="box" title="First Box">
+        Box 1 content here.
+        <ul id="unorderedList">
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+          <li>item 4</li>
+        </ul>
+      </div>
+      <div class="box" title="Second Box">Box 2 content here.</div>
+      <br />
+      <button class="changeButton" onclick="changeMainTitle()">
+        Change Main Title
+      </button>
+    </section>
+    <br />
+
+    <footer class="footer">
+      <button id="magic-button">Click Me!</button>
+    </footer>
+  </body>
+</html>

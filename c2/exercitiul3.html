@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration Preview</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .preview {
+        border: 1px solid black;
+        padding: 20px;
+        width: 45%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter your username"
+        /><br /><br />
+        <label for="about">About Me:</label>
+        <textarea
+          id="about"
+          rows="4"
+          cols="50"
+          placeholder="Tell something about yourself"
+        ></textarea
+        ><br />
+        <label for="country">Country:</label>
+        <select id="country">
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+          <option value="india">India</option>
+          <option value="romania">Romania</option></select
+        ><br /><br />
+        <label>Receive Newsletter:</label>
+        <input type="checkbox" id="newsletter" /><br /><br />
+        <button type="button" id="previewBtn">Show Preview</button>
+      </form>
+      <div class="preview" id="previewPanel">
+        <!-- The user details will be previewed here -->
+      </div>
+    </div>
+    <script src="exercitiul3.js"></script>
+  </body>
+</html>

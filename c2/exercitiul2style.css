@@ -1,0 +1,13 @@
+.highlight {
+  background-color: yellow;
+}
+.footer {
+  background-color: red;
+}
+.changeButton {
+  background-color: #85d385;
+  display: flex;
+  font-size: large;
+  border-radius: 10px;
+}
+
