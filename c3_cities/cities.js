@@ -26,7 +26,7 @@ document.addEventListener("click", function (event) {
     console.log(event.target.checked);
     let checkbox = event.target;
     let cityElement = checkbox.closest(".cityBttnContent");
-    let cityName = cityElement.getAttribute.trim();
+    let cityName = cityElement.textContent.trim();
     for (let i = 0; i <= cities.length - 1; i++) {
       if ((cities[i].name = cityName)) {
         cities[i].visited = checkbox.checked;
