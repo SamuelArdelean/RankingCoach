@@ -31,18 +31,7 @@ form {
 #city:focus {
   background-color: #a5b8dd;
 }
-#addBttn {
-  border-radius: 5px;
-  box-shadow: 2px 2px black;
-  background-color: #79ac78;
-  color: white;
-  transition: all 0.5s;
-}
-#addBttn:hover {
-  cursor: pointer;
-  background-color: #4f6f52;
-  color: white;
-}
+
 .citiesListContainer {
   display: flex;
   flex-direction: column;
@@ -65,6 +54,18 @@ form {
   padding-bottom: 5px;
 }
 
+#addBttn {
+  border-radius: 5px;
+  box-shadow: 2px 2px black;
+  background-color: #79ac78;
+  color: white;
+  transition: all 0.5s;
+}
+#addBttn:hover {
+  cursor: pointer;
+  background-color: #4f6f52;
+  color: white;
+}
 .deleteBttn {
   background-color: #ce5a67;
   border-radius: 4px;
