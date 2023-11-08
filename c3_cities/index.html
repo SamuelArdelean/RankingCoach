@@ -10,11 +10,16 @@
     </header>
     <main>
       <form>
-        <input type="text" id="city" placeholder="Enter a city..." />
+        <input type="text" id="cityInput" placeholder="Enter a city..." />
         <button type="button" id="addBttn">Add</button>
       </form>
       <div class="citiesListContainer"></div>
     </main>
     <script src="cities.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTqjQqfDSiu5x6IId123DKV3JzdtVwyi0&libraries=places&callback=initMap"
+    ></script>
   </body>
 </html>

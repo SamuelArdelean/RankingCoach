@@ -1,34 +1,36 @@
-window.addEventListener("DOMContentLoaded", () => {
-  loadFromLocalStorage();
-  renderList(cities);
-});
-
-let cities = []; //array - we will add city objects in array
+let cities = [];
 let cityObj = {}; // object city={name:'',visited:'true or false'}
 
 function renderList(cities) {
   let citiesListContainer = document.querySelector(".citiesListContainer");
   citiesListContainer.innerHTML = "";
-
   for (let i = 0; i <= cities.length - 1; i++) {
     let city = cities[i];
-
     let cityElement = document.createElement("div");
     cityElement.classList.add("cityBttnContent");
     cityElement.setAttribute("data-cityName", city.name);
-
     cityElement.innerHTML = `<div class=cityCheckBox">${
       city.name
     }<input type="checkbox"  class="check"  ${
       city.visited ? "checked" : ""
     }></div><button type="button" class="deleteBttn">"Delete City"</button>`;
-
     citiesListContainer.appendChild(cityElement);
   }
 }
-
+function initMap() {
+  const cityInput = document.getElementById("cityInput");
+  const autocomplete = new google.maps.places.Autocomplete(cityInput, {
+    types: ["(cities)"],
+  });
+  autocomplete.addListener("place_changed", () => {
+    let place = autocomplete.getPlace();
+    if (place.name) {
+      cityInput.value = place.name;
+    }
+  });
+}
 document.getElementById("addBttn").addEventListener("click", () => {
-  let cityName = document.getElementById("city").value;
+  let cityName = document.getElementById("cityInput").value;
   if (cityName.trim() != "") {
     // document.querySelector(".citiesListContainer").innerHTML +=
     //   "<div class='cityBttnContent' data-cityName='" +
@@ -48,7 +50,6 @@ document.getElementById("addBttn").addEventListener("click", () => {
   }
   console.log(cities);
 });
-
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("check")) {
     console.log(event.target.checked);
@@ -59,20 +60,16 @@ document.addEventListener("click", function (event) {
       if ((cities[i].name = cityName)) {
         cities[i].visited = checkbox.checked;
         console.log(cities);
-        break;
       }
     }
   }
 });
-
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("deleteBttn")) {
     let deleteBttn = event.target;
     let cityElement = deleteBttn.closest(".cityBttnContent");
     let cityName = cityElement.getAttribute("data-cityName");
-
     event.target.parentNode.remove();
-
     for (let i = 0; i < cities.length; i++) {
       if (cities[i].name === cityName) {
         cities.splice(i, 1);
@@ -82,13 +79,11 @@ document.addEventListener("click", function (event) {
     }
   }
 });
-
 function saveToLocalStorage() {
   const data = JSON.stringify(cities);
   localStorage.setItem("visitedCities", data);
   console.log(data);
 }
-
 function loadFromLocalStorage() {
   const data = localStorage.getItem("visitedCities");
   if (data) {

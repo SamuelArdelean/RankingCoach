@@ -11,7 +11,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-right: 15%;
+  margin-right: 15%; /*to do with max-width*/
   margin-left: 15%;
 }
 form {
@@ -21,14 +21,14 @@ form {
 }
 
 /*List container setup*/
-#city {
+#cityInput {
   border: double;
   height: 25px;
   margin-right: 10px;
   border-radius: 5px;
   box-shadow: 2px 2px;
 }
-#city:focus {
+#cityInput:focus {
   background-color: #a5b8dd;
 }
 
