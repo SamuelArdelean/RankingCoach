@@ -1,7 +1,10 @@
-let cities = [];
-let cityObj = {}; // object city={name:'',visited:'true or false'}
+window.addEventListener("DOMContentLoaded", () => {
+  loadFromLocalStorage();
+  renderList();
+});
 
-function renderList(cities) {
+let cities = [];
+function renderList() {
   let citiesListContainer = document.querySelector(".citiesListContainer");
   citiesListContainer.innerHTML = "";
   for (let i = 0; i <= cities.length - 1; i++) {
@@ -11,11 +14,12 @@ function renderList(cities) {
     cityElement.setAttribute("data-cityName", city.name);
     cityElement.innerHTML = `<div class=cityCheckBox">${
       city.name
-    }<input type="checkbox"  class="check"  ${
+    }<input type="checkbox"  class="check" data-checkBox=${city.name} ${
       city.visited ? "checked" : ""
-    }></div><button type="button" class="deleteBttn">"Delete City"</button>`;
+    }></div><button type="button" class="deleteBttn">Delete City</button>`;
     citiesListContainer.appendChild(cityElement);
   }
+  saveToLocalStorage();
 }
 function initMap() {
   const cityInput = document.getElementById("cityInput");
@@ -50,6 +54,7 @@ document.getElementById("addBttn").addEventListener("click", () => {
   }
   console.log(cities);
 });
+
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("check")) {
     console.log(event.target.checked);
@@ -62,6 +67,7 @@ document.addEventListener("click", function (event) {
         console.log(cities);
       }
     }
+    saveToLocalStorage();
   }
 });
 document.addEventListener("click", function (event) {
@@ -77,6 +83,7 @@ document.addEventListener("click", function (event) {
         break;
       }
     }
+    saveToLocalStorage();
   }
 });
 function saveToLocalStorage() {
